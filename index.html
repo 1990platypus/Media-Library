@@ -6,7 +6,7 @@
 <script>
 	function drop(){
 		console.log("entered drop");
-		document.getElementById("myDropdown").classList.toggle("hide");
+		document.getElementById("myDropdown").classList.toggle("show");
 	}
 		//close dropdown window if the user clicks outside of it
 		window.onclick = function(event) {
@@ -22,32 +22,52 @@
 			}
 
 		}	
+	
+	function getName(){
+		var person = prompt("Please enter your name", "Billy-bob Joe");
+	}
 </script>
 
-<body>		
-<h1>Erickson Library</h1>
-
-<div class = "search">
-	<form> Search by title: <input type = "text" class = "enterTitle" id = "titleField" value ="">
-	<br>
-	Suggestion: <span id = "txtHint"></span>
-	</form>
-</div>
+<body onload = "getName()">		
+<header>
+	<h1>Erickson Library</h1>
+</header>
+<div class = "container">
+	
+	<div class = "search">
+		<form> Search by title: <input type = "text" class = "enterTitle" id = "titleField" value ="">
+		<br>
+		Suggestion: <span id = "txtHint"></span>
+		</form>
+	</div>
 	<div class = "dropdown"> <button onclick = "drop()" class = "dropbtn">Genre</button>
 		<div id = "myDropdown" class = "dropdownGenres">
 			<a>Action</a>
+			<br>
 			<a>Adventure</a>
+			<br>
 			<a>Comedy</a>
+			<br>
 			<a>Drama</a>
+			<br>
 			<a>Fantasy</a>
+			<br>
 			<a>Kids</a>
+			<br>
 			<a>Thriller</a>
 		</div>
 	</div>
 	<div class = "available">
 		<button class = "displayAvailable">Available</button>
 	</div>
-
+	<nav>
+        <h2>Username</h2>
+        <ul>
+                <li>Stuff</li>
+                <li>More stuff</li>
+        </ul>
+</nav>
+</div>
 
 </body>
 </html>
